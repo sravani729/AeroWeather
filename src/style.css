@@ -1,0 +1,164 @@
+/* ---------------- Reset & Base ---------------- */
+* {
+  box-sizing: border-box;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url("https://static.vecteezy.com/system/resources/thumbnails/053/857/350/small/the-sky-is-filled-with-clouds-and-the-ocean-is-rough-with-waves-crashing-against-the-shore-scene-is-serene-and-tranquil-as-the-clouds-and-waves-create-a-sense-of-calmness-and-peacefulness-free-photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #0e0c0c;
+}
+
+/* ---------------- App Container ---------------- */
+.weather-app {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 800px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ---------------- Header ---------------- */
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+}
+
+/* ---------------- Form ---------------- */
+#weather-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#city-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.3);
+  color: #0e0d0d;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+#city-input::placeholder {
+  color: #131111;
+}
+
+#city-input:focus {
+  background: rgba(255,255,255,0.5);
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  background: rgba(0,123,255,0.7);
+  color: #131212;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgba(0,123,255,0.9);
+  transform: translateY(-2px);
+}
+
+/* ---------------- Weather Display ---------------- */
+#weather-display {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  transition: 0.3s;
+}
+
+#weather-display:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+#weather-container {
+  display: grid;
+  gap: 0.8rem;
+}
+
+#weather-container p {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: 0.3s;
+}
+
+#weather-container p:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+/* ---------------- Status Messages ---------------- */
+.loading, .error {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.loading { color: #00c0ff; }
+.error { color: #ff4d4f; }
+
+/* ---------------- Footer ---------------- */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  color: #0c0a0a;
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 600px) {
+  #weather-form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+
